@@ -18,10 +18,10 @@ services:
     volumes:
       - db_data:/var/lib/postgresql/data
     environment:
-      - POSTGRES_PASSWORD=sprint
-      - POSTGRES_USER=team6
+      - POSTGRES_PASSWORD=team6
+      - POSTGRES_USER=sprint
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U team6"]
+      test: ["CMD-SHELL", "pg_isready -U sprint"]
       interval: 10s
       timeout: 5s
       retries: 5
