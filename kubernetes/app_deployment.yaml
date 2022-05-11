@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: server
+  template:
+    metadata:
+      labels:
+        app:  server
+    spec:
+      containers:
+      - name:  server
+        image:  mhba
+        ports:
+        - containerPort: 55544
+        env:
+          - name:  SPRING_DATASOURCE_USERNAME
+            value: sprint
+          - name:  SPRING_DATASOURCE_PASSWORD
+            value: team6
+          - name: SPRING_DATASOURCE_URL
+            value: jdbc:postgresql://10.97.234.202:5432/postgres
