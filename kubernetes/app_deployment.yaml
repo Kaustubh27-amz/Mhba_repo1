@@ -16,7 +16,7 @@ spec:
       - name:  server
         image:  kaustubh27/app1
         ports:
-        - containerPort: 55544
+        - containerPort: 8081
         env:
           - name:  SPRING_DATASOURCE_USERNAME
             value: sprint
